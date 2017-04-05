@@ -1,2 +1,2 @@
-# Make vim the default editor.
+# vim!
 export EDITOR='vim';
