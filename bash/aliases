@@ -3,3 +3,13 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ~="cd ~" # home, sweet home...
+
+# quick edit/reload bash config
+alias rbp="source ~/.bashrc && echo 'shell config reloaded'"
+alias ebp="${EDITOR} ~/.dotfiles/bash/bash_profile"
+alias eba="${EDITOR} ~/.dotfiles/bash/aliases"
+
+# shortcuts
+alias dl="cd ~/Downloads"
+alias dv="cd ~/Development"
+alias dt="cd ~/.dotfiles"
