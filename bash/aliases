@@ -5,6 +5,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias ~="cd ~" # home, sweet home...
+alias gh="cd ~" # home, sweet home...
 
 # quick edit/reload bash config
 alias rbp="source ~/.bashrc && echo 'shell config reloaded'"
