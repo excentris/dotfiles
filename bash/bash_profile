@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # source bits and pieces
 for file in ~/.dotfiles/bash/{path,bash_prompt,exports,aliases,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
