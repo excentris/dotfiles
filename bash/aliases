@@ -11,6 +11,9 @@ alias gh="cd ~" # home, sweet home...
 alias rbp="source ~/.bashrc && echo 'shell config reloaded'"
 alias ebp="${EDITOR} ~/.dotfiles/bash/bash_profile"
 alias eba="${EDITOR} ~/.dotfiles/bash/aliases"
+# quick edit vimrc
+alias evc="${EDITOR} ~/.dotfiles/vimrc"
+
 
 # shortcuts
 alias dl="cd ~/Downloads"

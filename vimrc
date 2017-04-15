@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " make sure we stop pretending...
@@ -23,7 +24,6 @@ set cursorline
 " color scheme
 colorscheme solarized
 set background=dark
-let g:solarized_termcolors=256
 
 " syntax highlighting
 syntax on
