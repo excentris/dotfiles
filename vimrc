@@ -3,6 +3,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'plasticboy/vim-markdown'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " make sure we stop pretending...
