@@ -48,6 +48,9 @@ nnoremap <leader><space> :noh<cr> " stop highlighting search
 " long lines
 set colorcolumn=100
 
+" avoid breaking words when wrapping
+set linebreak
+
 " numbers
 set number
 set numberwidth=3
