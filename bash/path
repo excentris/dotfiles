@@ -1,3 +1,4 @@
 #!/bin/bash
 
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export JENV_ROOT="/usr/local/opt/jenv"
