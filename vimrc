@@ -18,6 +18,9 @@ set foldnestmax=4
 set autoindent
 set softtabstop=4 shiftwidth=4 expandtab
 
+" no wondering why backspace didn't do what I expected...
+set backspace=indent,eol,start
+
 " visual
 highlight Normal ctermbg=black
 set cursorline

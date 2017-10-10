@@ -6,16 +6,14 @@ for file in ~/.dotfiles/bash/{path,bash_prompt,exports,aliases,functions,extra};
 done;
 unset file;
 
-
-
 # source bash completion:
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
 # pimp prompt
+GIT_PROMPT_FETCH_REMOTE_STATUS=0
 [[ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]] && source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
-
 
 # init jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
