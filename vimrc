@@ -21,6 +21,9 @@ set softtabstop=4 shiftwidth=4 expandtab
 " no wondering why backspace didn't do what I expected...
 set backspace=indent,eol,start
 
+" use the clipboard
+set clipboard=unnamed
+
 " visual
 highlight Normal ctermbg=black
 set cursorline
