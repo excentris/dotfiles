@@ -19,3 +19,5 @@ brew cask install java
 brew cask install iTerm2
 brew cask install hammerspoon
 brew cask install karabiner-elements
+brew cask install google-backup-and-sync
+brew cask install dash

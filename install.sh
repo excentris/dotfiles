@@ -15,3 +15,7 @@ fi
 # brew stuff
 echo "Brewing..."
 source brew.sh
+
+# get hammerspoon config
+git clone git@github.com:excentris/hammerspoon-config.git $HOME/.hammerspoon
+cp "$HOME/Google Drive/Config/hammerspoon-config.json" $HOME/.hammerspoon/config.json
