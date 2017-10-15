@@ -1,0 +1,15 @@
+{
+    "combo": ["ctrl", "alt", "cmd"],
+    "maker_channel_id": "c-89cLMxtQ7cDytSSqhtk0",
+    "app_shortcuts": {
+        "I": "Intellij IDEA",
+        "C": "Google Chrome",
+        "H": "HipChat",
+        "S": "Spotify",
+        "P": "Postman",
+        "F": "Finder",
+        "T": "iTerm",
+        "W": "WhatsApp",
+        "G": "SourceTree"
+    }
+}

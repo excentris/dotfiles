@@ -16,6 +16,12 @@ fi
 echo "Brewing..."
 source brew.sh
 
+# XCode
+echo "Installing XCode..."
+xcode-select --install
+
 # get hammerspoon config
-git clone git@github.com:excentris/hammerspoon-config.git $HOME/.hammerspoon
+echo "Setting up Hammerspoon..."
+# symlink hammerspoon config
+ln -s ~/.dotfiles/hammerspoon $HOME/.hammerspoon
 cp "$HOME/Google Drive/Config/hammerspoon-config.json" $HOME/.hammerspoon/config.json

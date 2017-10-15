@@ -21,3 +21,5 @@ brew cask install hammerspoon
 brew cask install karabiner-elements
 brew cask install google-backup-and-sync
 brew cask install dash
+
+brew cleanup
