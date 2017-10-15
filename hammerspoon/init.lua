@@ -38,11 +38,6 @@ hs.hotkey.bind(combo, '.', function ()
     hs.caffeinate.startScreensaver()
 end)
 
--- Caffeine replacement
-hs.loadSpoon("Caffeine")
-spoon.Caffeine:bindHotkeys({toggle={combo, "z"}})
-spoon.Caffeine:start()
-
 -- bind configured app shortcuts
 for k, v in pairs(config.app_shortcuts) do 
     hs.hotkey.bind(combo, k, function () hs.application.launchOrFocus(v) end)
@@ -54,3 +49,15 @@ hs.hotkey.bind(combo, "r", function()
   hs.notify.new({title="Hammerspoon config reloaded", informativeText="Manually via keyboard shortcut"}):send()
 end)
 
+-- Spoon stuff
+hs.loadSpoon("SpoonInstall")
+
+-- Caffeine replacement
+spoon.SpoonInstall:andUse('Caffeine',
+    {
+        hotkeys = {
+            toggle = {combo, 'z' }
+        },
+        start = true,
+    }
+)
