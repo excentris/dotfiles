@@ -46,29 +46,6 @@ for k, v in pairs(config.app_shortcuts) do
     hs.hotkey.bind(combo, k, function () hs.application.launchOrFocus(v) end)
 end
 
--- Quickly react to notifications
-function clickNotificationButton(buttonNr)
-    script = [[ 
-        tell application "System Events" to tell process "Notification Center"
-            try
-                click button ]] .. buttonNr .. [[ of first item of windows
-            end try
-        end tell
-    ]]
-
-    hs.applescript(script)
-end
-
--- To click the first button, often close
-hs.hotkey.bind(combo, "-", function()
-  hs.timer.doAfter(1, function() clickNotificationButton(1) end)
-end)
-
--- To click the second button, often reply
-hs.hotkey.bind(combo, "=", function()
-  hs.timer.doAfter(1, function() clickNotificationButton(2) end)
-end)
-
 -- Reload config
 hs.hotkey.bind(combo, "r", function()
   hs.reload()
