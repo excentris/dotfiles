@@ -4,7 +4,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'plasticboy/vim-markdown'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
+
 
 " make sure we stop pretending...
 set nocompatible
@@ -61,3 +63,8 @@ set linebreak
 set number
 set numberwidth=3
 
+" easymotion config
+let g:EasyMotion_do_mapping = 0 " disable default mappings
+nmap s <Plug>(easymotion-s2)
+nmap f <Plug>(easymotion-overwin-f)
+let g:EasyMotion_smartcase = 1 " case insensitive
