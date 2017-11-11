@@ -69,3 +69,7 @@ let g:EasyMotion_do_mapping = 0 " disable default mappings
 nmap s <Plug>(easymotion-s2)
 nmap f <Plug>(easymotion-overwin-f)
 let g:EasyMotion_smartcase = 1 " case insensitive
+
+" fzf
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>e :Buffers<CR>
