@@ -5,6 +5,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'plasticboy/vim-markdown'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 
