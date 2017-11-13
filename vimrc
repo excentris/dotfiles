@@ -10,6 +10,7 @@ Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-repeat'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
