@@ -13,6 +13,8 @@ brew install bash-git-prompt
 brew install vim --with-override-system-vi
 brew install git
 brew install tmux
+brew install fzf
+$(brew --prefix)/opt/fzf/install
 
 # cask
 brew cask install java
