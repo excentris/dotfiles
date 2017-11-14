@@ -14,7 +14,6 @@ alias eba="${EDITOR} ~/.dotfiles/bash/aliases"
 # quick edit vimrc
 alias evc="${EDITOR} ~/.dotfiles/vimrc"
 
-
 # shortcuts
 alias dl="cd ~/Downloads"
 alias dv="cd ~/Development"
@@ -30,3 +29,6 @@ fi
 
 alias ls="ls -lh ${colorflag}"
 alias la="ls -lah ${colorflag}"
+
+# source any non-generic aliases if they have been specified
+[ -f ~/.custom_aliases ] && source ~/.custom_aliases
