@@ -79,3 +79,8 @@ let g:EasyMotion_smartcase = 1 " case insensitive
 " fzf
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>e :Buffers<CR>
+
+" split with something I can remember
+nnoremap <leader>h <C-w>s
+nnoremap <leader>v <C-w>v
+
