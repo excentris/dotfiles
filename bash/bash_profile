@@ -18,3 +18,5 @@ GIT_PROMPT_FETCH_REMOTE_STATUS=0
 # init jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
+# source fzf here instead of bashrc becuase OSX does not source bashrc on startup
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
