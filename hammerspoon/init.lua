@@ -60,7 +60,8 @@ spoon.SpoonInstall:andUse('Caffeine',
     {
         hotkeys = {
             toggle = {combo, 'z' }
-        }
+        },
+        start = true
     }
 )
 
