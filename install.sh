@@ -20,8 +20,14 @@ source brew.sh
 echo "Installing XCode..."
 xcode-select --install
 
-# get hammerspoon config
+# Hammerspoon
 echo "Setting up Hammerspoon..."
 # symlink hammerspoon config
 ln -s ~/.dotfiles/hammerspoon $HOME/.hammerspoon
+# get hammerspoon config
 cp "$HOME/Google Drive/Config/hammerspoon-config.json" $HOME/.hammerspoon/config.json
+
+# Karabiner-Elements
+echo "Setting up Karabiner-Elements..."
+# symlink karabiner config
+ln -s ~/.dotfiles/karabiner $HOME/.config/karabiner
