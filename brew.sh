@@ -14,7 +14,7 @@ brew install vim --with-override-system-vi
 brew install git
 brew install tmux
 brew install fzf
-$(brew --prefix)/opt/fzf/install
+$(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 # cask
 brew cask install java
