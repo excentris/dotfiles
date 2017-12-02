@@ -2,3 +2,9 @@
 
 # vim!
 export EDITOR='vim';
+
+# dotfiles
+export DOTFILES=$HOME/.dotfiles
+
+# scripts
+export SCRIPTS=$DOTFILES/scripts
