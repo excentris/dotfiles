@@ -1,51 +1,31 @@
 local util = require "util"
 
 --[[
-    Config file example:
+Config file example:
 
-    {
-        "combo": ["ctrl", "alt", "cmd"],
-        "maker_channel_id": "...",
-        "app_shortcuts": {
-            "C": "Google Chrome",
-            "S": "Spotify"
-        }
-    }
+{
+    "combo": ["ctrl", "alt", "cmd"],
+    "maker_channel_id": "...",
+    "app_shortcuts": {
+        "C": "Google Chrome",
+        "S": "Spotify"
+    },
+    "home_networks": ["12345"]
+}
 --]]
-local config = hs.json.decode(util.read_file("config.json"));
+local config = hs.json.decode(util.readFile("config.json"));
 --print(hs.inspect(config))
 
 combo = config.combo
 maker_channel_id = config.maker_channel_id
 sonos_api_url = config.sonos_api_url
+home_networks = config.home_networks
 
 -- Display information about music currently playing through Spotify
 hs.hotkey.bind(combo, "q", function()
-    local spotify = ""
-
-    if hs.spotify.isPlaying() then
-        spotify = spotify .. "This machine playing: " .. hs.spotify.getCurrentTrack() .. " by " .. hs.spotify.getCurrentArtist() .. "\n"
-    end
-
-    status, data, headers = hs.http.get(sonos_api_url .. "/zones", nil)
-
-    local json_data = hs.json.decode(data)
-
-    local sonos = ""
-    if status == 200 then
-        for k, zone in pairs(json_data) do 
-            if zone.coordinator.state.playbackState == "PLAYING" then
-                sonos = sonos .. zone.coordinator.roomName .. " playing: " .. zone.coordinator.state.currentTrack.title .. " by " .. zone.coordinator.state.currentTrack.artist
-                if next(json_data, k) ~= nil then
-                    sonos = sonos .. "\n"  
-                end
-            end
-        end
-    end
-
-    hs.alert.show(spotify .. sonos, 3)
+    hs.alert.show()
+    util.whatsPlaying()
 end)
-
 
 
 -- Save currently playing song to My Library on Spotify
@@ -73,8 +53,8 @@ end
 
 -- Reload config
 hs.hotkey.bind(combo, "r", function()
-  hs.reload()
-  hs.notify.new({title="Hammerspoon config reloaded", informativeText="Manually via keyboard shortcut"}):send()
+    hs.reload()
+    hs.notify.new({title="Hammerspoon config reloaded", informativeText="Manually via keyboard shortcut"}):send()
 end)
 
 -- Spoon stuff
@@ -82,12 +62,12 @@ hs.loadSpoon("SpoonInstall")
 
 -- Caffeine replacement
 spoon.SpoonInstall:andUse('Caffeine',
-    {
-        hotkeys = {
-            toggle = {combo, 'z' }
-        },
-        start = true
-    }
+{
+    hotkeys = {
+        toggle = {combo, 'z' }
+    },
+    start = true
+}
 )
 
 -- Spectacle replacement
