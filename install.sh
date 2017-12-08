@@ -32,6 +32,12 @@ echo "Setting up Karabiner-Elements..."
 # symlink karabiner config
 ln -sfn $DOTFILES/karabiner $HOME/.config/karabiner
 
+# Tmux
+echo "Setting up Tmux..."
+# symlink karabiner config
+ln -sfn $DOTFILES/.tmux $HOME/.tmux
+ln -sfn $DOTFILES/tmux.conf $HOME/.tmux.conf
+
 # make scripts executable
 echo "Making scripts executable..."
 chmod u+x $SCRIPTS/*
