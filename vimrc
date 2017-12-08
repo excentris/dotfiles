@@ -12,6 +12,7 @@ Plug 'guns/vim-sexp'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 
@@ -37,9 +38,15 @@ set clipboard=unnamed
 highlight Normal ctermbg=black
 set cursorline
 
+" lightline config
+set laststatus=2
+set noshowmode " do not display status, lightline will do that
+let g:lightline = { 'colorscheme': 'solarized' }
+
 " color scheme
 colorscheme solarized
 set background=dark
+
 
 " syntax highlighting
 syntax on
@@ -48,9 +55,6 @@ filetype plugin indent on   " enables filetype specific plugins
 
 " remap leader
 let mapleader = ","
-
-" lusty
-set hidden
 
 " searching
 set ignorecase
@@ -79,6 +83,11 @@ let g:EasyMotion_smartcase = 1 " case insensitive
 " fzf
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>e :Buffers<CR>
+"
+" move between buffers
+set hidden
+nnoremap <C-n> :bnext<cr>
+nnoremap <C-p> :bprev<cr>
 
 " split with something I can remember
 nnoremap <leader>h <C-w>s
