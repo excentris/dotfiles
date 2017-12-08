@@ -23,7 +23,6 @@ home_networks = config.home_networks
 
 -- Display information about music currently playing through Spotify
 hs.hotkey.bind(combo, "q", function()
-    hs.alert.show()
     util.whatsPlaying()
 end)
 
