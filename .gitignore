@@ -1,3 +1,4 @@
 # right now there's nothing here to be vc'd
 .vim
+.tmux
 hammerspoon/config.json
