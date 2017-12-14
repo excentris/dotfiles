@@ -20,9 +20,11 @@ call plug#end()
 set nocompatible
 
 " code folding
-set foldmethod=indent
-set foldlevel=2
-set foldnestmax=4
+set foldmethod=syntax
+set foldlevelstart=20
+set foldnestmax=10
+set foldlevel=1
+
 
 " indentation
 set autoindent
@@ -46,7 +48,6 @@ let g:lightline = { 'colorscheme': 'solarized' }
 " color scheme
 colorscheme solarized
 set background=dark
-
 
 " syntax highlighting
 syntax on
