@@ -13,6 +13,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 call plug#end()
 
 
