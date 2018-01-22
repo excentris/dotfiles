@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'jszakmeister/vim-togglecursor'
 call plug#end()
 
 
@@ -95,3 +96,5 @@ nnoremap <C-p> :bprev<cr>
 nnoremap <leader>h <C-w>s
 nnoremap <leader>v <C-w>v
 
+" get rid of escape delays
+set timeoutlen=1000 ttimeoutlen=10
