@@ -42,9 +42,10 @@ function util.whatsPlaying()
         on_spotify = "This machine playing: " .. hs.spotify.getCurrentTrack() .. " by " .. hs.spotify.getCurrentArtist()
     end
 
-    if on_spotify ~= "" then
-        hs.alert.show(on_spotify, 4)
-    end
+    -- HUD info
+    hud = os.date("%H:%M | %Y-%m-%d | %a")
+
+    hs.alert.show(hud .. "\n" .. on_spotify, 4)
 end
 
 return util

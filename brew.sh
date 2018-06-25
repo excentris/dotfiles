@@ -24,5 +24,6 @@ brew cask install karabiner-elements
 brew cask install google-backup-and-sync
 brew cask install dash
 brew cask install slack
+brew cask install the-unarchiver
 
 brew cleanup
