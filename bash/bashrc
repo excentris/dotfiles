@@ -1,3 +1,6 @@
 #!/bin/bash
 
 [ -n "$PS1" ] && source ~/.bash_profile;
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/eduardo/.jenv/bin/jenv-init.sh" ]] && source "/Users/eduardo/.jenv/bin/jenv-init.sh" && source "/Users/eduardo/.jenv/commands/completion.sh"

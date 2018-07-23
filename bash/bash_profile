@@ -23,3 +23,6 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 # source fzf here instead of bashrc becuase OSX does not source bashrc on startup
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/eduardo/.jenv/bin/jenv-init.sh" ]] && source "/Users/eduardo/.jenv/bin/jenv-init.sh" && source "/Users/eduardo/.jenv/commands/completion.sh"

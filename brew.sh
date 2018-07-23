@@ -25,5 +25,6 @@ brew cask install google-backup-and-sync
 brew cask install dash
 brew cask install slack
 brew cask install the-unarchiver
+brew cask install android-studio
 
 brew cleanup

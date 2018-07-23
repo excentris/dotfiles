@@ -16,6 +16,9 @@ function util.atHome()
 end
 
 function util.whatsPlaying()
+    -- HUD info
+    local hud = os.date("%H:%M | %Y-%m-%d | %a")
+
     if util.atHome() then
         hs.http.asyncGet(sonos_api_url .. "/zones", nil, function(status, data, headers)
             local on_sonos = ""
@@ -32,7 +35,7 @@ function util.whatsPlaying()
             end
 
             if on_sonos ~= "" then
-                hs.alert.show(on_sonos, 4)
+                hs.alert.show(hud .. "\n" .. on_sonos, 4)
             end
         end)
     end
@@ -42,10 +45,9 @@ function util.whatsPlaying()
         on_spotify = "This machine playing: " .. hs.spotify.getCurrentTrack() .. " by " .. hs.spotify.getCurrentArtist()
     end
 
-    -- HUD info
-    hud = os.date("%H:%M | %Y-%m-%d | %a")
-
-    hs.alert.show(hud .. "\n" .. on_spotify, 4)
+    if on_spotify ~= "" then
+        hs.alert.show(hud .. "\n" .. on_spotify, 4)
+    end
 end
 
 return util
