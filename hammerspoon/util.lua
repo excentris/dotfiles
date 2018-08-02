@@ -42,12 +42,10 @@ function util.whatsPlaying()
 
     local on_spotify = ""
     if hs.spotify.isPlaying() then
-        on_spotify = "This machine playing: " .. hs.spotify.getCurrentTrack() .. " by " .. hs.spotify.getCurrentArtist()
+        on_spotify = "\n" .. "This machine playing: " .. hs.spotify.getCurrentTrack() .. " by " .. hs.spotify.getCurrentArtist()
     end
 
-    if on_spotify ~= "" then
-        hs.alert.show(hud .. "\n" .. on_spotify, 4)
-    end
+    hs.alert.show(hud .. on_spotify, 4)
 end
 
 return util
