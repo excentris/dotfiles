@@ -17,7 +17,6 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 # cask
-brew cask install java
 brew cask install iTerm2
 brew cask install hammerspoon
 brew cask install karabiner-elements
