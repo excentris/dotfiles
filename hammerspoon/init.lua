@@ -50,12 +50,6 @@ for k, v in pairs(config.app_shortcuts) do
     hs.hotkey.bind(combo, k, function () hs.application.launchOrFocus(v) end)
 end
 
--- Reload config
-hs.hotkey.bind(combo, "r", function()
-    hs.reload()
-    hs.notify.new({title="Hammerspoon config reloaded", informativeText="Manually via keyboard shortcut"}):send()
-end)
-
 -- Spoon stuff
 hs.loadSpoon("SpoonInstall")
 

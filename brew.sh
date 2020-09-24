@@ -20,10 +20,8 @@ $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 brew cask install iTerm2
 brew cask install hammerspoon
 brew cask install karabiner-elements
-brew cask install google-backup-and-sync
 brew cask install dash
 brew cask install slack
 brew cask install the-unarchiver
-brew cask install android-studio
 
 brew cleanup

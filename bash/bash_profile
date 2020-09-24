@@ -24,6 +24,8 @@ fi
 # source fzf here instead of bashrc becuase OSX does not source bashrc on startup
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
