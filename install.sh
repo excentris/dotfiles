@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "Let's do this..."
 
@@ -24,8 +24,6 @@ xcode-select --install
 echo "Setting up Hammerspoon..."
 # symlink hammerspoon config
 ln -sfn $DOTFILES/hammerspoon $HOME/.hammerspoon
-# get hammerspoon config
-cp "$HOME/Google Drive/Config/hammerspoon-config.json" $HOME/.hammerspoon/config.json
 
 # Karabiner-Elements
 echo "Setting up Karabiner-Elements..."

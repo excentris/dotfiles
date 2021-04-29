@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # abort if we're already inside a TMUX session
 if [ ! -z "$TMUX" ]; then

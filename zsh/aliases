@@ -1,0 +1,34 @@
+#!/bin/zsh
+
+# navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~" # home, sweet home...
+alias gh="cd ~" # home, sweet home...
+
+# quick edit/reload bash config
+alias rbp="source ~/.zshrc && echo 'shell config reloaded'"
+alias ebp="${EDITOR} ~/.dotfiles/zsl/zshrc"
+alias eba="${EDITOR} ~/.dotfiles/zsl/aliases"
+# quick edit vimrc
+alias evc="${EDITOR} ~/.dotfiles/vimrc"
+
+# shortcuts
+alias dl="cd ~/Downloads"
+alias dv="cd ~/Development"
+alias dt="cd ~/.dotfiles"
+
+# pimp ls
+# determine flag used to colorize ls output
+if gls --color > /dev/null 2>&1; then # GNU ls
+    colorflag="--color"
+else # OSX ls
+    colorflag="-G"
+fi
+
+alias ls="ls -lh ${colorflag}"
+alias la="ls -lah ${colorflag}"
+
+# source any non-generic aliases if they have been specified
+[ -f ~/.custom_aliases ] && source ~/.custom_aliases

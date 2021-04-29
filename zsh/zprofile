@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+# source bits and pieces
+for file in ~/.dotfiles/zsh/{path,aliases,functions}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
+# vim!
+export EDITOR='vim';
+
+# dotfiles
+export DOTFILES=$HOME/.dotfiles
+
+# scripts
+export SCRIPTS=$DOTFILES/scripts
+
+# cargo rust
+export PATH="$HOME/.cargo/bin:$PATH"

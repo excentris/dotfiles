@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/usr/local/sbin:/sbin:$SCRIPTS:$PATH"
+export JENV_ROOT="/usr/local/opt/jenv"

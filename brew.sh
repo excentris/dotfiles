@@ -17,11 +17,11 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc
 
 # cask
-brew cask install iTerm2
-brew cask install hammerspoon
-brew cask install karabiner-elements
-brew cask install dash
-brew cask install slack
-brew cask install the-unarchiver
+brew install --cask iTerm2
+brew install --cask hammerspoon
+brew install --cask karabiner-elements
+brew install --cask dash
+brew install --cask slack
+brew install --cask the-unarchiver
 
 brew cleanup
